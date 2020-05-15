@@ -1,0 +1,93 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui"
+	   xmlns:incubator="urn:import:gwt.material.design.incubator.client"
+       xmlns:client="urn:import:gwt.material.design.addins.client">
+
+  
+	
+	
+	<g:HTMLPanel>
+	 <m:MaterialLabel  text="Display Plans" waves="LIGHT" textColor="BLACK" fontSize="30px"/>
+	 <m:MaterialPanel ui:field="p1">
+	
+      <m:MaterialRow>
+        <m:MaterialTitle title=" Choose your Subscription plans"  />
+        <m:MaterialColumn grid="l4">
+          <m:MaterialCard backgroundColor="WHITE">
+            <m:MaterialCardImage waves="LIGHT">
+              <client:webp.MaterialWebpImage url="https://stfalcon.com/uploads/images/5c530fce1295a.png" fallbackExtension="png"/>
+              <m:MaterialCardTitle text="Platinum" iconType="STAR"/>
+            </m:MaterialCardImage>
+
+            <m:MaterialCardContent textColor="BLACK">
+              <m:MaterialLabel text="1 MONTH PLAN" fontSize="2.2em" />
+            </m:MaterialCardContent>
+
+            <m:MaterialCardAction>
+              <m:MaterialLink text="subscribe" textColor="RED" fontSize="1.5em" ui:field="ml1"/>
+            
+            </m:MaterialCardAction>
+             <m:MaterialCardReveal>
+              <m:MaterialCardTitle text="1 month plan" iconType="CLOSE" iconPosition="RIGHT" textColor="BLUE"/> 
+              <m:MaterialLabel text="this is your 1 month plan in this you have to pay 500 rs for taking this as your subscription plan"   fontSize="1.5em"/>
+            </m:MaterialCardReveal>
+          </m:MaterialCard>
+        </m:MaterialColumn>
+        <m:MaterialColumn grid="l4">
+          <m:MaterialCard backgroundColor="WHITE">
+            <m:MaterialCardImage waves="LIGHT">
+              <client:webp.MaterialWebpImage url="https://stfalcon.com/uploads/images/5c530fce1295a.png" fallbackExtension="png"/>
+              <m:MaterialCardTitle text="Silver" iconType="STAR"  />
+            </m:MaterialCardImage>
+
+            <m:MaterialCardContent textColor="BLACK">
+              <m:MaterialLabel text="6 MONTHS PLAN" fontSize="2.2em"/>
+            </m:MaterialCardContent>
+
+            <m:MaterialCardAction>
+              <m:MaterialLink text="subscribe" textColor="RED" fontSize="1.5em" ui:field="ml2"/>
+              
+            </m:MaterialCardAction>
+             <m:MaterialCardReveal>
+              <m:MaterialCardTitle text="6 months plan" iconType="CLOSE" iconPosition="RIGHT" textColor="BLUE"/>
+              <m:MaterialLabel text="this is your 6 months plan in this you have to pay 3000 rs for taking this as your subscription plan."   fontSize="1.5em"/>
+            </m:MaterialCardReveal>
+          </m:MaterialCard>
+        </m:MaterialColumn>
+         <m:MaterialColumn grid="l4">
+          <m:MaterialCard backgroundColor="WHITE">
+            <m:MaterialCardImage waves="LIGHT">
+              <client:webp.MaterialWebpImage url="https://stfalcon.com/uploads/images/5c530fce1295a.png" fallbackExtension="png"/>
+              <m:MaterialCardTitle text="Gold" iconType="STAR" />
+            </m:MaterialCardImage>
+
+            <m:MaterialCardContent textColor="BLACK">
+              <m:MaterialLabel text="1 YEAR PLAN"  fontSize="2.2em"/>
+            </m:MaterialCardContent>
+
+            <m:MaterialCardAction>
+              <m:MaterialLink text="subscribe" textColor="RED" fontSize="1.5em" ui:field="ml3"/>
+              
+            </m:MaterialCardAction>
+             <m:MaterialCardReveal>
+              <m:MaterialCardTitle text="1 year plan" iconType="CLOSE" iconPosition="RIGHT" textColor="BLUE"/>
+               <m:MaterialLabel text="this is your 1 year plan in this you have to pay 10,000 rs for taking this as your subscription plan."  fontSize="1.5em" />
+            </m:MaterialCardReveal>
+          
+          </m:MaterialCard>
+        </m:MaterialColumn>
+      </m:MaterialRow>
+     
+       
+  
+ </m:MaterialPanel>
+  
+ <m:MaterialButton ui:field="back"/>   
+ 
+ 
+	 
+	 
+	</g:HTMLPanel>
+</ui:UiBinder> 

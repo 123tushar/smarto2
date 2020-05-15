@@ -1,0 +1,335 @@
+bhalu.java
+
+package com.client;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Widget;
+
+public class bhalu extends Composite {
+
+	private static bhaluUiBinder uiBinder = GWT.create(bhaluUiBinder.class);
+
+	interface bhaluUiBinder extends UiBinder<Widget, bhalu> {
+	}
+
+	public bhalu() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
+	@UiField
+	Button button;
+	@UiField
+	Button b2;
+	
+	public bhalu(String firstName) {
+		initWidget(uiBinder.createAndBindUi(this));
+		button.setText(firstName);
+		
+	}
+	@UiHandler("button")
+	void onClick(ClickEvent e) {
+		Window.alert("hello");
+		
+	}
+	public void setText(String text) {
+		button.setText(text);
+		
+	}
+	public String getText() {
+		return button.getText();
+	}
+	
+	
+
+	
+}
+-----------------------------------------------------------------------------------------------------------
+
+greetind service
+package com.client;
+
+import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+
+/**
+ * The client-side stub for the RPC service.
+ */
+@RemoteServiceRelativePath("greet")
+public interface GreetingService extends RemoteService {
+  String greetServer(String name) throws IllegalArgumentException;
+}
+-------------------------------------------------------------------------------------
+Async
+package com.client;
+
+import com.google.gwt.user.client.rpc.AsyncCallback;
+
+/**
+ * The async counterpart of <code>GreetingService</code>.
+ */
+public interface GreetingServiceAsync {
+  void greetServer(String input, AsyncCallback<String> callback)
+      throws IllegalArgumentException;
+}
+------------------------------------------------------------------------------------------------------
+
+jadu.java
+package com.client;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Widget;
+
+public class jadu extends Composite {
+
+	private static jaduUiBinder uiBinder = GWT.create(jaduUiBinder.class);
+
+	interface jaduUiBinder extends UiBinder<Widget, jadu> {
+	}
+
+	public jadu() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
+	@UiField
+	Button button;
+	@UiField
+	TextBox t1;
+	@UiField
+	TextBox t2;
+	@UiField
+	TextBox t3;
+	
+	public jadu(String firstName) {
+		initWidget(uiBinder.createAndBindUi(this));
+		button.setText(firstName);
+		
+		
+	}
+	@UiHandler("button")
+	void onClick(ClickEvent e) {
+		Window.alert("hello");
+		
+	}
+	public void setText(String text) {
+		button.setText(text);
+		
+	}
+	public String getText() {
+		return button.getText();
+		
+	}
+	
+	
+	
+
+}
+----------------------------------------------------------------------------------------------------------
+-----------(entry point)ram.java
+package com.client;
+
+import com.shared.FieldVerifier;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.KeyCodes;
+import com.google.gwt.event.dom.client.KeyUpEvent;
+import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class ram implements EntryPoint{
+
+	@Override
+	public void onModuleLoad() {
+		// TODO Auto-generated method stub
+		Button b1=new Button("jadu");
+		Button b2=new Button("bhalu");
+		RootPanel.get("tt1").add(b1);
+		RootPanel.get("tt2").add(b2);
+		b1.addClickHandler(new ClickHandler() {
+
+			@Override
+			public void onClick(ClickEvent e){
+				// TODO Auto-generated method stub
+				RootPanel.get("tt2").clear();
+				jadu a1=new jadu();
+				RootPanel.get("tt2").add(a1);
+				
+			}
+			
+		});
+b2.addClickHandler(new ClickHandler() {
+
+	@Override
+	public void onClick(ClickEvent event) {
+		// TODO Auto-generated method stub
+		RootPanel.get("tt2").clear();
+		bhalu a2=new bhalu();
+		RootPanel.get("tt2").add(a2);
+		
+		
+	}
+	
+});
+		
+		
+		
+	}
+	
+
+}
+----------------------------------------------------------------------------------------------------------------------------------
+bhalu.XML
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+	 <g:Button ui:field="b2"></g:Button>
+	 <g:Button ui:field="button"></g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 
+-------------------------------------------------------------------------------------------------------------------------------
+jadu.XML
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+	 <g:Button  ui:field="button" />
+	 <g:TextBox  ui:field="t1"> </g:TextBox>
+	 <g:TextBox  ui:field="t2"> </g:TextBox>
+	 <g:TextBox  ui:field="t3"> </g:TextBox>
+	</g:HTMLPanel>
+</ui:UiBinder> 
+-------------------------------------------------------------------------------------------------------------------------------------
+IMPL
+
+package com.server;
+
+import com.client.GreetingService;
+import com.shared.FieldVerifier;
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
+/**
+ * The server-side implementation of the RPC service.
+ */
+@SuppressWarnings("serial")
+public class GreetingServiceImpl extends RemoteServiceServlet implements
+    GreetingService {
+
+  public String greetServer(String input) throws IllegalArgumentException {
+    // Verify that the input is valid. 
+    if (!FieldVerifier.isValidName(input)) {
+      // If the input is not valid, throw an IllegalArgumentException back to
+      // the client.
+      throw new IllegalArgumentException(
+          "Name must be at least 4 characters long");
+    }
+
+    String serverInfo = getServletContext().getServerInfo();
+    String userAgent = getThreadLocalRequest().getHeader("User-Agent");
+
+    // Escape data from the client to avoid cross-site script vulnerabilities.
+    input = escapeHtml(input);
+    userAgent = escapeHtml(userAgent);
+
+    return "Hello, " + input + "!<br><br>I am running " + serverInfo
+        + ".<br><br>It looks like you are using:<br>" + userAgent;
+  }
+
+  /**
+   * Escape an html string. Escaping data received from the client helps to
+   * prevent cross-site script vulnerabilities.
+   * 
+   * @param html the html string to escape
+   * @return the escaped string
+   */
+  private String escapeHtml(String html) {
+    if (html == null) {
+      return null;
+    }
+    return html.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(
+        ">", "&gt;");
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+ram.HTML
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="ram.css">
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>Web Application Starter Project</title>
+    
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" language="javascript" src="ram/ram.nocache.js"></script>
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body>
+
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+    <h1>Web Application Starter Project</h1>
+
+    <table align="center">
+      <tr><td id="tt1"></td></tr>
+      <tr><td id="tt2"></td></tr>
+    </table>
+  </body>
+</html>

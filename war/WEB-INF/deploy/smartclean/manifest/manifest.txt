@@ -1,0 +1,3 @@
+# Module Smartclean
+# RPC service class, partial path of RPC policy file
+com.Docassisto.client.GreetingService, 843123FC2C54CF49FB692C08978BBD69.gwt.rpcS

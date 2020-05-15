@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:h="urn:import:gwt.material.design.client.ui.html">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+	  <m:MaterialLabel text="Register" fontSize="25px"/>
+	  <m:MaterialTextBox ui:field="t1" label="Clinic Name" width=" 50%"  iconType="ACCOUNT_CIRCLE" />
+	  <m:MaterialTextBox ui:field="t7" label="Clinic Pass" width=" 50%"  iconType="ACCOUNT_CIRCLE" />  
+	  <m:MaterialTextBox ui:field="t2" label="Your Name" width=" 50%" iconType="DATE_RANGE" />
+	  <m:MaterialTextBox ui:field="t3" label="Doctor/Compounder" width=" 50%" iconType="DATE_RANGE" />
+	  <m:MaterialTextBox ui:field="t4" label="Email" width=" 50%" iconType="PHONE" /> 
+	  <m:MaterialTextBox ui:field="t5" label="Username" width=" 50%" iconType="WC" />
+	  <m:MaterialTextBox ui:field="t6" label="Password"  width=" 50%" iconType="FACE" />
+	  <m:MaterialButton ui:field="b1" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

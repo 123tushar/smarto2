@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	.l1{
+	font-size:35px;
+	color:#e62c2c;
+}
+
+.vp{
+	border:2px;
+}
+.tl{
+	font-size:20px;
+}
+	</ui:style>
+	<g:HTMLPanel>
+	<!--  <m:MaterialListBox ui:field="mlb"></m:MaterialListBox>-->
+	<br/>
+	<m:MaterialLabel ui:field="l1" styleName="{style.l1}"></m:MaterialLabel><br/>
+	<m:MaterialLabel ui:field="l2" styleName="{style.l1}"></m:MaterialLabel>
+	<!--  <g:Label ui:field="l3"></g:Label>-->
+	<m:MaterialCollection border="None" width="350px">
+	<m:MaterialButton ui:field="bd" float="RIGHT"/>
+	<m:MaterialDatePicker ui:field="db" float="RIGHT"/>
+	</m:MaterialCollection>	<br/><br/>
+	<g:Label ui:field="tl" styleName="{style.tl}"></g:Label>
+	<g:HorizontalPanel ui:field="hp"></g:HorizontalPanel>
+	<!--  <m:MaterialCollection ui:field="vp" styleName="{style.vp}"></m:MaterialCollection>-->
+	<!--  <g:DialogBox ui:field="dibo"></g:DialogBox>-->
+	<m:MaterialCollapsible ui:field="maco"></m:MaterialCollapsible>
+	<!-- <table border="2px" id="tab">
+	<tr><td>hello</td><td>hello</td></tr>
+	</table>-->
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,41 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui">
+	<g:HTMLPanel>
+	  <m:MaterialPanel ui:field="m1" >
+	 <m:MaterialHeader >
+            <m:MaterialNavBar  ui:field="navBar"  backgroundColor="BLUE" shadow="1">
+                    <m:MaterialLabel text="Create Appoint" float="LEFT" fontSize="15px"></m:MaterialLabel> 
+                    <m:MaterialLink ui:field="lout" iconType="ALL_OUT" iconPosition="LEFT" text="Logout" textColor="WHITE" waves="LIGHT" float="RIGHT" fontSize="20px" />    
+                    <m:MaterialLink ui:field="send" iconType="SEND" iconPosition="LEFT" text="Send Prescription" textColor="WHITE" waves="LIGHT" float="RIGHT" paddingRight="10" fontSize="20px"/>
+                    
+                    
+            </m:MaterialNavBar>
+        </m:MaterialHeader>
+        </m:MaterialPanel>
+        
+	
+	
+        
+       
+	
+	 <br></br><br></br><br></br>
+	
+
+	
+	  <m:MaterialDatePicker ui:field="t1" width=" 50%"  iconType="ACCOUNT_CIRCLE" /> 
+	  <m:MaterialTextBox ui:field="t2" label="Appointment number" width=" 50%" iconType="DATE_RANGE" />
+	  <m:MaterialTextBox ui:field="t3" label="Patient name" width=" 50%" iconType="PERSON" /> 
+	  <m:MaterialTextBox ui:field="t4" label="Fee" width=" 50%" iconType="PHONE" /> 
+	  <m:MaterialTextBox ui:field="t5" label="Gender" width=" 50%" iconType="WC" />
+	  <m:MaterialTextBox ui:field="t6" label="Weight"  width=" 50%" iconType="FACE" />
+	  <m:MaterialTextBox ui:field="t7" label="Blood group" width=" 50%" iconType="FORMAT_BOLD" />
+	  <m:MaterialTextBox ui:field="t8" label="Age " width=" 50%" iconType="ACCOUNT_CIRCLE" />
+	  <m:MaterialTextBox ui:field="t9" label="Blood pressure" width=" 50%" iconType="FORMAT_BOLD"  />
+	  <m:MaterialTextBox ui:field="t10" label="Email" width=" 50%" iconType="EMAIL" />
+	  <m:MaterialTextArea ui:field="t11" label="Symptoms" width=" 50%" iconType="ASSIGNMENT" /> 
+	  <m:MaterialButton ui:field="button" text="MAKE APPOINTMENT" waves="LIGHT" backgroundColor="BLUE" textColor="BLACK" iconType="CREATE" iconPosition="LEFT"  ></m:MaterialButton>
+	 
+	</g:HTMLPanel>
+</ui:UiBinder> 

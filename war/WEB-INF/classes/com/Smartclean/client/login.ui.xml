@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+	    <m:MaterialImage url="http://5.9.195.187/~aiimshis/images/doctor-icon.png" width="15%" height="15%"></m:MaterialImage>
+		<m:MaterialTextBox ui:field="t1" label="User Name" width=" 30%"  iconType="ACCOUNT_CIRCLE" /> 
+	    <m:MaterialTextBox ui:field="t2" label="Password" width=" 30%" iconType="SECURITY" />
+
+
+		<m:MaterialButton ui:field="button" text="Login"></m:MaterialButton><br/><br/>
+		<m:MaterialLink text="New? Register" ui:field="ml"></m:MaterialLink>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 
